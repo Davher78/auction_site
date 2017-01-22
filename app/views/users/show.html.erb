@@ -1,0 +1,13 @@
+
+<h1> Name: <%= @user.nombre %></h1>
+<p> Email: <%= @user.email %></p>
+<p>
+<%= link_to 'Listado de Productos', user_products_path(@user) %>
+<p>
+<%= link_to('Borrar Usuario', user_path(@user),
+        method: :delete, data: { confirm: "estás seguro?" }) %>
+<p>
+
+<%= link_to 'Listado de usuarios', users_path %>
+<p>
+

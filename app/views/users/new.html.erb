@@ -1,0 +1,16 @@
+<h1> Add a new user </h1>
+
+<%= flash[:error] %>
+<%= form_for @user do |f| %>
+  <%= f.label :nombre %>
+  <%= f.text_field :nombre %>
+
+  <%= f.label :email %>
+  <%= f.text_area :email %>
+
+  <%= f.button %>
+  
+<% end %>
+<p>
+<%= link_to 'Listado de usuarios', users_path %>
+<p>

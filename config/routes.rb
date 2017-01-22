@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+	scope '/api' do
+
+		resources :users, only: [:new, :index, :show, :create, :destroy] do
+
+	  		resources :products, only: [:new, :index, :show, :create, :destroy]
+
+		end
+
+	end
+
 end

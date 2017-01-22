@@ -1,0 +1,18 @@
+
+<h1> <%= @user.nombre %></h1>
+
+<ul>
+  <% @productos.each do |product| %>
+
+    <li>
+    	<%= link_to product.title, user_product_path(@user, product) %>
+    </li>
+
+  <% end %>
+<p>
+  <%= link_to 'Volver a Usuario', user_path(@user) %>
+<p>
+<%= link_to 'Nuevo producto', new_user_product_path(@user) %>
+<p>
+
+</ul>  

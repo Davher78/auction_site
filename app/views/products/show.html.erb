@@ -1,0 +1,17 @@
+<h1>
+	products - show
+</h1>
+<li>
+    <%= @producto.title %>
+    <%= @producto.description %>
+    <%= @producto.deadline %>
+</li>
+
+<p>
+  <%= link_to 'Volver a Productos', user_products_path(@user) %>
+<p>
+
+<p>
+<%= link_to('Borrar producto', user_product_path(@user, @producto),
+        method: :delete, data: { confirm: "estás seguro?" }) %>
+<p>

@@ -1,0 +1,21 @@
+<h1> Nuevo Producto para el usuario <%= @user.nombre %> </h1>
+
+<%= flash[:error] %>
+<%= form_for [@user, @producto] do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.label :deadline %>
+  <%= f.text_area :deadline %>
+
+  <%= f.button %>
+  
+<% end %>
+
+<p>
+  <%= link_to 'Volver a Usuario', user_path(@user) %>
+<p>
